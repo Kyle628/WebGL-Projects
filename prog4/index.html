@@ -1,0 +1,76 @@
+<!--
+Kyle O'Connor
+kyjoconn@ucsc.edu
+5/20/2016
+
+                                      Program Description:
+This program is an extension of the previous programs, for which there is a description of
+how files are being read in, how shading was done, and how various transformations were accomplished.
+This program adds on additional functionality:
+
+-Zooming
+
+-Panning
+
+-Movement of Camera along the z axis
+
+-Movement of objects along the z axis
+
+-Pitch and Yaw camera rotation
+
+
+                                       Notes to grader:
+-Probably only works in google chrome
+
+-Works best with enterprise
+
+-Controls are in the README
+-->
+
+<html>
+
+  <body onload="main()" oncontextmenu="return false;">
+
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <div id="togglecam">
+    <button>Ortho/Persp</button>
+    </div>
+
+    <div id="toggleshade">
+    <button>Flat/Smooth</button>
+    </div>
+
+    <div id="togglespec">
+    <button>Specularity on/off</button>
+    </div>
+
+    <input type="range"  min="1" max="20" value="1" id = "shinyslide" />
+
+    <p>
+      Upload coor and poly files
+    </p>
+
+    <input type="file" name="file" id="file" multiple>
+
+    <p>
+      upload a texture
+    </p>
+
+    <input type="file" name="image" id="imagefile">
+
+    <a href="./features.html">Features</a>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="./TexMap.js"></script>
+
+  </body>
+</html>
+
+
+

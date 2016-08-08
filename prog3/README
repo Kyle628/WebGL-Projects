@@ -1,0 +1,19 @@
+                                Controls:
+
+Left click to select an object (including point light)
+
+Translate with left click down + drag
+
+Rotate with right click + drag
+
+Scale with middle click + scroll
+
+                                Notes to grader:
+-Probably only works in Google Chrome
+
+-Works best with frame and enterprise.
+
+-Specular light is very overpowering for some reason, implemented slider bar but specular lighting
+ is strong even at shininess = 1, so it is hard to tell
+
+-Careful scrolling the point light source, it moves quickly

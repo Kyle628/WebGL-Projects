@@ -1,0 +1,54 @@
+ <!--
+Kyle O'Connor
+kyjoconn@ucsc.edu
+4/23/2016
+
+This program reads in two files, a .coor and a .poly file. The coordinates from .coor
+are read into an array vertarr[]. The same is done for the .poly file into pgons[],
+while also calculating the normal vector to each polygon and storing this info in a
+new array polynorms[].
+
+Then, for every polygon in Pgons, it is figured out what triangles will be drawn and
+what vertices these triangles require. Then we grab the the appropriate vertices from
+vertarr[] and append them to a new array triarr[]. From vertarr, we build up a 4x4
+matrix of what transformations will need to be applied to each vertex. With all this
+info set up properly, we make all the webgl calls, and display whatever object was
+described in the files. The transformations are applied in the Vshader, and all of
+the shading calculations happen in the Fshader.
+
+Smooth shading was accomplished by building up an array of vertex normals, calculating
+color per vertex within the vertex shader, and then passing these colors to the fragment
+shader using a varying.
+
+As of now, the program is not working perfectly, but works best with chair1 and couch
+
+-->
+
+<html>
+
+  <body onload="main()" oncontextmenu="return false;">
+
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <div id="togglecam">
+    <button>Ortho/Persp</button>
+    </div>
+
+    <div id="toggleshade">
+    <button>Flat/Smooth</button>
+    </div>
+
+    <input type="range"  min="1" max="20" />
+
+    <input type="file" name="file" id="file" multiple>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="./Picking.js"></script>
+
+  </body>
+</html>

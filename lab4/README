@@ -1,0 +1,19 @@
+Controls:
+
+  Objects:
+    -Left click an object to select it (including point light)
+    -Translate with left click down on object + drag
+    -Rotate with right click on object + drag
+    -Move along z axis with middle click on object + mousewheel
+
+  Camera:
+    -Zoom with mousewheel
+    -Pan with left-click-hold on background + drag
+    -Move camera along z with middle click on background + mousewheel
+    -Rotate camera (pitch and yaw) with right-click-hold on background + drag
+
+Notes to Grader:
+
+  -Probably only works in google chrome
+  -Works best with enterprise
+

@@ -1,0 +1,75 @@
+<!--
+Kyle O'Connor
+kyjoconn@ucsc.edu
+4/23/2016
+
+                                      Program Description:
+Kyle O'Connor
+kyjoconn@ucsc.edu
+4/23/2016
+
+                                      Program Description:
+This program is an extension of the previous programs, for which there is a description of
+how files are being read in, how shading was done, and how various transformations were accomplished.
+This program adds on additional functionality:
+
+Read in multiple objects and fit them all in the canvas
+
+Left click to select an object
+
+Translate with left click down + drag
+
+Rotate with right click + drag
+
+Scale with middle click + scroll
+
+Maneuverable point light source added by default, select it with left click,
+move it with left click down + drag
+
+Specular Lighting toggle, and shininess slider
+
+
+                                Notes to grader:
+-Probably only works in google chrome
+
+-Works best with frame and enterprise.
+
+-Specular light is very overpowering for some reason, implemented slider bar but specular lighting
+ is strong even at shininess = 1, so it is hard to tell
+
+-Careful scrolling the point light source, it moves quickly
+-->
+
+<html>
+
+  <body onload="main()" oncontextmenu="return false;">
+
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <div id="togglecam">
+    <button>Ortho/Persp</button>
+    </div>
+
+    <div id="toggleshade">
+    <button>Flat/Smooth</button>
+    </div>
+
+    <div id="togglespec">
+    <button>Specularity on/off</button>
+    </div>
+
+    <input type="range"  min="1" max="20" id = "shinyslide" />
+
+    <input type="file" name="file" id="file" multiple>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="./Camera_copy.js"></script>
+
+  </body>
+</html>
+
